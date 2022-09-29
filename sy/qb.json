@@ -1,54 +1,56 @@
-{
-    "bookSourceComment": "//为了安全，以后的源可能都会启用这种，一是防止小人举报，二是防止装逼的吹牛逼。\n// 0 代表不启用\n// 1代表启用\n//默认为1启用\nflag = 1",
-    "bookSourceGroup": "自用",
-    "bookSourceName": "qbread",
-    "bookSourceType": 0,
-    "bookSourceUrl": "https://qbread.cn",
-    "bookUrlPattern": "",
-    "concurrentRate": "",
-    "customOrder": -88903118,
-    "enabled": true,
-    "enabledCookieJar": false,
-    "enabledExplore": false,
-    "enabledReview": false,
-    "exploreUrl": "",
-    "header": "{\"x-qbrn-cookie\":\"Q-H5-ACCOUNT=1; Q-H5-USERTYPE=4\",\n\"from_browser_qbrn\":\"1\"}",
-    "lastUpdateTime": 1664442581322,
-    "loginCheckJs": "",
-    "loginUi": "",
-    "loginUrl": "",
-    "respondTime": 1653,
-    "ruleBookInfo": {
-        "author": "$.author",
-        "coverUrl": "$.picurl",
-        "init": "$.data",
-        "intro": "$.summary",
-        "kind": "$.tag##\\|##,",
-        "lastChapter": "{{$.lastSerialname}} {{\" • \"+java.timeFormat(java.getString(\"lastSerialUpdateTime\")*1000)}}",
-        "name": "$.resourceName",
-        "tocUrl": "<js>\neval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\\\b'+e(c)+'\\\\b','g'),k[c]);return p}('0 4=2.5(\\'4\\')0 6=2.5(\\'a\\')0 3=2.b(\\'c\\',2.d(\\'3\\'))0 7=2.e(f g(),\\'h\\',8)0 9=\\'i://j.k.l.m/n/o/p/q-r?t=\\'+7+\\'&s=\\'+4+\\'&u=1&v=w&3=\\'+3+\\'&x=y\\'9+\\',\\'+6',35,35,'let||java|serialnum|bid|get|body|time||url|referer|put|pages|getString|timeFormatUTC|new|Date|yyyyMMddHHmmss|https|bookshelf|html5|qq|com|qbread|api|book|list|chapter|resourceid||start|count|100|sort|asc'.split('|'),0,{}))\n</js>",
-        "wordCount": "$.contentsize"
-    },
-    "ruleContent": {
-        "content": "$.data.content[*]"
-    },
-    "ruleExplore": {},
-    "ruleReview": {},
-    "ruleSearch": {
-        "author": "$.author",
-        "bookList": "$.data.state[?(@.dataName == 'novel_search_list')].items[*]",
-        "bookUrl": "<js>\neval(function(p,a,c,k,e,r){e=function(c){return c.toString(36)};if('0'.replace(0,e)==0){while(c--)r[e(c)]=k[c];k=[function(e){return r[e]||e}];e=function(){return'[02-79a-f]'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\\\b'+e(c)+'\\\\b','g'),k[c]);return p}('0 2=3.5(\\'2\\',3.getString(\\'docId\\').split(\\'_\\')[1])0 6=3.timeFormatUTC(new Date(),\\'yyyyMMddHHmmss\\',8)0 7=\\'9://a.b.c.d/e/api/novel/adbooks/bookinfo?bookid=\\'+2+\\'&t=\\'+6 0 4=\\'9://a.b.c.d/e/adread/catalog?resourceid=\\'+2+\\'&sort=desc&traceid=0024001\\'0 f=3.5(\\'4\\',JSON.stringify({\"headers\":{\"Referer\":4}}))7+\\',\\'+f',[],16,'let||bid|java|referer|put|time|url||https|bookshelf|html5|qq|com|qbread|body'.split('|'),0,{}))\n</js>",
-        "coverUrl": "$.cover_url",
-        "intro": "$.abstract",
-        "kind": "{{$.label_text}}\n{{$.tag_views}}\n{{java.getString(\"is_finished\") == 1 ? '已完结': '连载中'}}\n##\\s+##,",
-        "name": "$.title"
-    },
-    "ruleToc": {
-        "chapterList": "<js> \nlet pageCount =\njava.getString('page_count')\njava.put('count',pageCount)\nresult\n</js>\n$.rows[*]",
-        "chapterName": "$.serialname",
-        "chapterUrl": "<js>\neval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\\\b'+e(c)+'\\\\b','g'),k[c]);return p}('3 b=5.o(p q(),\\'r\\',8)3 c=5.d(\\'c\\')3 6=5.d(\"6\")3 7=5.e(\"9\")3 4=5.e(\"4\")3 a=s({\"u\":1,\"v\":1,\"w\":x,\"y\":1,\"z\":14,\"6\":6,\"A\":0})3 f=B.C({\"D\":{\"E\":\\'g://h.i.j.k/l/F/m?9=\\'+7+\\'&4=\\'+4+\\'&G=&H=I&J=K\\'}})3 n=\\'g://h.i.j.k/l/L/M/N/O-m/P?t=\\'+b+\\'&9=\\'+7+\\'&4=\\'+4+\\'&Q=1&R=1&S=1&a=\\'+a+\\'&T=U&V=2&W=&X=Y&Z=1&10=1&11=&12=&13=&15=&16=\\'n+\\',\\'+f',62,69,'|||let|serialid|java|pages|resId||resourceid|adsParam|time|bid|get|getString|body|https|bookshelf|html5|qq|com|qbread|chapter|url|timeFormatUTC|new|Date|yyyyMMddHHmmss|encodeURIComponent||iChapterNum|iCurChapter|bPay|false|iFirstCategory|iSecondCategory|bChaseUpdate|JSON|stringify|headers|Referer|adread|shelftype|from|catalog|traceid|0024001|api|wenxue|buy|ad|v3|apn|readnum|forceShowVideo|version|202008101749|duration|qaid|abtid|100000_100000_100000_102726_2409968_101751|adr|adb|taid|oaid|macAddress||androidID|srcCh'.split('|'),0,{}))\n</js>",
-        "nextTocUrl": "<js>\nlet count = java.get('count')\nlet list = [];\nfor(let i = 2; i <= Number(count); i++) {\nlist.push(baseUrl.replace(/start=\\d+/, 'start=' + i));\n}\nlist;\n</js>"
-    },
-    "searchUrl": "<js>\n(function(_0x2b9270){let _0x5361e7=parseInt(String(source['\\x62\\x6f\\x6f\\x6b\\x53\\x6f\\x75\\x72\\x63\\x65\\x43\\x6f\\x6d\\x6d\\x65\\x6e\\x74'])['\\x6d\\x61\\x74\\x63\\x68'](/flag[\\s+]?\\=[\\s+]?(\\d+)/)[0x1]);let _0x4dc45c=_0x2b9270['\\x6c\\x65\\x6e\\x67\\x74\\x68']>0x4?_0x2b9270['\\x74\\x72\\x69\\x6d']()['\\x73\\x75\\x62\\x73\\x74\\x72\\x69\\x6e\\x67'](0x0,_0x2b9270['\\x6c\\x65\\x6e\\x67\\x74\\x68']-0x1):_0x2b9270['\\x74\\x72\\x69\\x6d']();if(!_0x5361e7)java['\\x74\\x6f\\x61\\x73\\x74']('\\u4f4e\\u8c03\\u4f7f\\u7528\\uff0c\\u4f7f\\u7528\\u65b9\\u6cd5\\u8bf7\\u770b\\u6ce8\\u91ca\\x28\\x66\\x6c\\x61\\x67\\x29');return _0x5361e7?'\\x68\\x74\\x74\\x70\\x73\\x3a\\x2f\\x2f\\x73\\x6f\\x2e\\x68\\x74\\x6d\\x6c\\x35\\x2e\\x71\\x71\\x2e\\x63\\x6f\\x6d\\x2f\\x61\\x6a\\x61\\x78\\x2f\\x72\\x65\\x61\\x6c\\x2f\\x73\\x65\\x61\\x72\\x63\\x68\\x5f\\x72\\x65\\x73\\x75\\x6c\\x74\\x3f\\x74\\x61\\x62\\x49\\x64\\x3d\\x33\\x36\\x30\\x26\\x6e\\x6f\\x54\\x61\\x62\\x3d\\x31\\x26\\x71\\x3d'+_0x4dc45c:baseUrl;}(key));\n</js>\n",
-    "weight": 0
-}
+[
+    {
+        "bookSourceComment": "//为了安全，以后的源可能都会启用这种，一是防止小人举报，二是防止装逼的吹牛逼。\n// 0 代表不启用\n// 1代表启用\n//默认为1启用\nflag = 1",
+        "bookSourceGroup": "自用",
+        "bookSourceName": "qbread",
+        "bookSourceType": 0,
+        "bookSourceUrl": "https://qbread.cn",
+        "bookUrlPattern": "",
+        "concurrentRate": "",
+        "customOrder": -88903118,
+        "enabled": true,
+        "enabledCookieJar": false,
+        "enabledExplore": false,
+        "enabledReview": false,
+        "exploreUrl": "",
+        "header": "{\"x-qbrn-cookie\":\"Q-H5-ACCOUNT=1; Q-H5-USERTYPE=4\",\n\"from_browser_qbrn\":\"1\"}",
+        "lastUpdateTime": 1664442581322,
+        "loginCheckJs": "",
+        "loginUi": "",
+        "loginUrl": "",
+        "respondTime": 1653,
+        "ruleBookInfo": {
+            "author": "$.author",
+            "coverUrl": "$.picurl",
+            "init": "$.data",
+            "intro": "$.summary",
+            "kind": "$.tag##\\|##,",
+            "lastChapter": "{{$.lastSerialname}} {{\" • \"+java.timeFormat(java.getString(\"lastSerialUpdateTime\")*1000)}}",
+            "name": "$.resourceName",
+            "tocUrl": "<js>\neval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\\\b'+e(c)+'\\\\b','g'),k[c]);return p}('0 4=2.5(\\'4\\')0 6=2.5(\\'a\\')0 3=2.b(\\'c\\',2.d(\\'3\\'))0 7=2.e(f g(),\\'h\\',8)0 9=\\'i://j.k.l.m/n/o/p/q-r?t=\\'+7+\\'&s=\\'+4+\\'&u=1&v=w&3=\\'+3+\\'&x=y\\'9+\\',\\'+6',35,35,'let||java|serialnum|bid|get|body|time||url|referer|put|pages|getString|timeFormatUTC|new|Date|yyyyMMddHHmmss|https|bookshelf|html5|qq|com|qbread|api|book|list|chapter|resourceid||start|count|100|sort|asc'.split('|'),0,{}))\n</js>",
+            "wordCount": "$.contentsize"
+        },
+        "ruleContent": {
+            "content": "$.data.content[*]"
+        },
+        "ruleExplore": {},
+        "ruleReview": {},
+        "ruleSearch": {
+            "author": "$.author",
+            "bookList": "$.data.state[?(@.dataName == 'novel_search_list')].items[*]",
+            "bookUrl": "<js>\neval(function(p,a,c,k,e,r){e=function(c){return c.toString(36)};if('0'.replace(0,e)==0){while(c--)r[e(c)]=k[c];k=[function(e){return r[e]||e}];e=function(){return'[02-79a-f]'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\\\b'+e(c)+'\\\\b','g'),k[c]);return p}('0 2=3.5(\\'2\\',3.getString(\\'docId\\').split(\\'_\\')[1])0 6=3.timeFormatUTC(new Date(),\\'yyyyMMddHHmmss\\',8)0 7=\\'9://a.b.c.d/e/api/novel/adbooks/bookinfo?bookid=\\'+2+\\'&t=\\'+6 0 4=\\'9://a.b.c.d/e/adread/catalog?resourceid=\\'+2+\\'&sort=desc&traceid=0024001\\'0 f=3.5(\\'4\\',JSON.stringify({\"headers\":{\"Referer\":4}}))7+\\',\\'+f',[],16,'let||bid|java|referer|put|time|url||https|bookshelf|html5|qq|com|qbread|body'.split('|'),0,{}))\n</js>",
+            "coverUrl": "$.cover_url",
+            "intro": "$.abstract",
+            "kind": "{{$.label_text}}\n{{$.tag_views}}\n{{java.getString(\"is_finished\") == 1 ? '已完结': '连载中'}}\n##\\s+##,",
+            "name": "$.title"
+        },
+        "ruleToc": {
+            "chapterList": "<js> \nlet pageCount =\njava.getString('page_count')\njava.put('count',pageCount)\nresult\n</js>\n$.rows[*]",
+            "chapterName": "$.serialname",
+            "chapterUrl": "<js>\neval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\\\b'+e(c)+'\\\\b','g'),k[c]);return p}('3 b=5.o(p q(),\\'r\\',8)3 c=5.d(\\'c\\')3 6=5.d(\"6\")3 7=5.e(\"9\")3 4=5.e(\"4\")3 a=s({\"u\":1,\"v\":1,\"w\":x,\"y\":1,\"z\":14,\"6\":6,\"A\":0})3 f=B.C({\"D\":{\"E\":\\'g://h.i.j.k/l/F/m?9=\\'+7+\\'&4=\\'+4+\\'&G=&H=I&J=K\\'}})3 n=\\'g://h.i.j.k/l/L/M/N/O-m/P?t=\\'+b+\\'&9=\\'+7+\\'&4=\\'+4+\\'&Q=1&R=1&S=1&a=\\'+a+\\'&T=U&V=2&W=&X=Y&Z=1&10=1&11=&12=&13=&15=&16=\\'n+\\',\\'+f',62,69,'|||let|serialid|java|pages|resId||resourceid|adsParam|time|bid|get|getString|body|https|bookshelf|html5|qq|com|qbread|chapter|url|timeFormatUTC|new|Date|yyyyMMddHHmmss|encodeURIComponent||iChapterNum|iCurChapter|bPay|false|iFirstCategory|iSecondCategory|bChaseUpdate|JSON|stringify|headers|Referer|adread|shelftype|from|catalog|traceid|0024001|api|wenxue|buy|ad|v3|apn|readnum|forceShowVideo|version|202008101749|duration|qaid|abtid|100000_100000_100000_102726_2409968_101751|adr|adb|taid|oaid|macAddress||androidID|srcCh'.split('|'),0,{}))\n</js>",
+            "nextTocUrl": "<js>\nlet count = java.get('count')\nlet list = [];\nfor(let i = 2; i <= Number(count); i++) {\nlist.push(baseUrl.replace(/start=\\d+/, 'start=' + i));\n}\nlist;\n</js>"
+        },
+        "searchUrl": "<js>\n(function(_0x2b9270){let _0x5361e7=parseInt(String(source['\\x62\\x6f\\x6f\\x6b\\x53\\x6f\\x75\\x72\\x63\\x65\\x43\\x6f\\x6d\\x6d\\x65\\x6e\\x74'])['\\x6d\\x61\\x74\\x63\\x68'](/flag[\\s+]?\\=[\\s+]?(\\d+)/)[0x1]);let _0x4dc45c=_0x2b9270['\\x6c\\x65\\x6e\\x67\\x74\\x68']>0x4?_0x2b9270['\\x74\\x72\\x69\\x6d']()['\\x73\\x75\\x62\\x73\\x74\\x72\\x69\\x6e\\x67'](0x0,_0x2b9270['\\x6c\\x65\\x6e\\x67\\x74\\x68']-0x1):_0x2b9270['\\x74\\x72\\x69\\x6d']();if(!_0x5361e7)java['\\x74\\x6f\\x61\\x73\\x74']('\\u4f4e\\u8c03\\u4f7f\\u7528\\uff0c\\u4f7f\\u7528\\u65b9\\u6cd5\\u8bf7\\u770b\\u6ce8\\u91ca\\x28\\x66\\x6c\\x61\\x67\\x29');return _0x5361e7?'\\x68\\x74\\x74\\x70\\x73\\x3a\\x2f\\x2f\\x73\\x6f\\x2e\\x68\\x74\\x6d\\x6c\\x35\\x2e\\x71\\x71\\x2e\\x63\\x6f\\x6d\\x2f\\x61\\x6a\\x61\\x78\\x2f\\x72\\x65\\x61\\x6c\\x2f\\x73\\x65\\x61\\x72\\x63\\x68\\x5f\\x72\\x65\\x73\\x75\\x6c\\x74\\x3f\\x74\\x61\\x62\\x49\\x64\\x3d\\x33\\x36\\x30\\x26\\x6e\\x6f\\x54\\x61\\x62\\x3d\\x31\\x26\\x71\\x3d'+_0x4dc45c:baseUrl;}(key));\n</js>\n",
+        "weight": 0
+    }
+]
