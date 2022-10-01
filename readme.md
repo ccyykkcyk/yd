@@ -16,9 +16,9 @@
 
 > 酷安： @风停在了窗边
 >
-> gitlink： https://www.gitlink.org.cn/fcdlcb/yd
+> gitlink： https://www.gitlink.org.cn/fcdlcb
 >
-> 书源 https://www.gitlink.org.cn/api/fcdlcb/yd/raw?filepath=shareBookSource.json
+> 书源 https://www.gitlink.org.cn/api/fcdlcb/FTSY/raw?filepath=shareBookSource.json
 
 ## namofree发布地址
 
