@@ -24,6 +24,11 @@
 
 > 酷安: @namofree
 
+## 烏雲净化规则 发布地址
+
+> 酷安： @烏雲
+>
+> 蓝奏 https://www.lanzoux.com/b0bw8jwoh
 
 
 
@@ -43,3 +48,5 @@
 > 破冰书源 `https://gh.ccyykk.cf/https://github.com/ccyykkcyk/yd/raw/main/sy/pb.json`
 >
 > 番茄小说书源 `https://gh.ccyykk.cf/https://github.com/ccyykkcyk/yd/raw/main/sy/fqxs.json`
+>
+> 烏雲净化规则 `https://gh.ccyykk.cf/https://github.com/ccyykkcyk/yd/raw/main/jh/wy.json`
