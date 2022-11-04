@@ -106,7 +106,7 @@
     },
     "ruleToc": {
       "chapterList": "$.data[*]",
-      "chapterName": "$.chapterName##[\\(（【].*?[求更谢乐发推].*?[】）\\)] ",
+      "chapterName": "$.chapterName##[\\(（【].*?[求更谢乐发推].*?[】）\\)] ",
       "chapterUrl": "$.path@js:java.aesBase64DecodeToString(result,\"bQRKwYYkR0IDqRKC\",\"AES/CBC/PKCS5Padding\",\"0123456789abcdef\")",
       "updateTime": "{{$.updatedAt}}\n字数：{{$.wordNum}}"
     },
@@ -1334,7 +1334,7 @@
     "ruleContent": {
       "content": "id.nr1@html##一秒记住.*免费阅读！|.*第.*章.*|m.*com",
       "nextContentUrl": "text.下一页@href",
-      "replaceRegex": "##<!--go--> "
+      "replaceRegex": "##<!--go--> "
     },
     "ruleExplore": {
       "author": "class.author@text",
