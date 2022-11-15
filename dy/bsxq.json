@@ -1,0 +1,31 @@
+[
+  {
+    "articleStyle": 0,
+    "concurrentRate": "",
+    "customOrder": -24966,
+    "enableJs": true,
+    "enabled": true,
+    "enabledCookieJar": false,
+    "header": "{\"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36\"}",
+    "injectJs": "if (!/^https:\\/\\/(so\\.toutiao\\.com\\/search\\/?|quark\\.sm\\.cn\\/s|wap\\.sogou\\.com\\/web\\/searchList\\.jsp|m\\.so\\.com\\/s|cn\\.bing\\.com\\/search|www\\.baidu\\.com\\/s)\\?/.test(window.location.href) && !document.getElementById('open-yuedu-bookshelf')) {\n      const btn = document.createElement('div');\n      btn.innerHTML = `<button type=\"button\" id='open-yuedu-bookshelf' style=\"z-index: 9999999999;position: fixed;bottom: 7%;right: 7%;background-color: rgb(255, 153, 0);border-radius: 2px;border: 1px solid rgb(255, 153, 0);color: #fff;font-size:${window.innerWidth/80}vw;font-weight: 400;padding: ${window.innerWidth/400}vw ${window.innerWidth/150}vw;\" onclick=\"window.open('legado://import/addToBookshelf?src=${encodeURIComponent(window.location.href)}','_blank')\">加入书架</button>`;\n      document.body.appendChild(btn);\n    }\n\n    let time,num=0;\n    const herfs = new Map();\n    function onTouchStart(evt) {\n      for (const el of evt.path) {\n        if (el.tagName === \"A\") {\n          if (el.href !== 'javascript:void(0)') {\n            const inner = el.href;\n            herfs.set(el, inner);\n            el.setAttribute('href', 'javascript:void(0)');\n            time = setTimeout(() => {\twindow.open(`legado://import/addToBookshelf?src=${encodeURIComponent(inner)}`, '_blank')\n            }, 600);\n          }\n          break;\n        }\n      }\n    };\nfunction onTouchEnd(evt) {\n      if (time) {\n        clearTimeout(time);\n        time = undefined;\n      }\n\tfor (const el of evt.path) {\n        if (el.tagName === \"A\") {\n          if (el.href === 'javascript:void(0)') {\n            const herf = herfs.get(el);\n            if (herf) {\n              el.setAttribute('href', herf)\n            }\n          }\n          break;\n        }\n    }\n}\n\nfunction addListener(els){\nArray.from(els, (item) => {\n      if (item.getAttribute('add-yuedu-bookshelf') !== 'add-yuedu-bookshelf' && item.innerText && item.href && !/^#|^javascript:/.test(item.href)) {\n        item.setAttribute('add-yuedu-bookshelf', 'add-yuedu-bookshelf');\n        item.addEventListener('touchstart', onTouchStart);\n        item.addEventListener('touchend', onTouchEnd);\n        item.addEventListener('touchcancel', onTouchEnd);\n        item.addEventListener('mousedown', onTouchStart);\n        item.addEventListener('mouseup', onTouchEnd);\n      }\n    });\nnum= els.length;\n}\n\nfunction reAdd(){\n\t\tconst els = document.getElementsByTagName('a');\n\tif(els.length>num)addListener(els);\n}\n\nreAdd();\n\nconst observer = new ResizeObserver(reAdd);\nobserver.observe(document.body);",
+    "lastUpdateTime": 0,
+    "loadWithBaseUrl": false,
+    "ruleArticles": "@js:\nvar labels = `${source.getVariable()||\"\"}`.trim();\n[\n{\n\t\"name\":\"夸克搜索\",\n\t\"url\":\"https://quark.sm.cn/s?q=小说排行\"\n},\n{\n\t\"name\":\"搜狗搜索\",\n\t\"url\":\"https://wap.sogou.com/web/searchList.jsp?keyword=小说排行\"\n},\n{\n\t\"name\":\"头条搜索\",\n\t\"url\":\"https://so.toutiao.com/search/?keyword=小说排行\"\n},\n{\n\t\"name\":\"360搜索\",\n\t\"url\":\"https://m.so.com/s?q=小说排行\"\n},\n{\n\t\"name\":\"必应搜索\",\n\t\"url\":\"https://cn.bing.com/search?q=小说排行\"\n},\n{\n\t\"name\":\"百度搜索\",\n\t\"url\":\"https://www.baidu.com/s?wd=小说排行\"\n}\n].concat(labels?labels.split(/\\s+/).map(it=>{\n\tconst href=it.split(\"::\");\n\treturn {\"name\":href[0],\"url\":href[1]}\n\t}):(source.setVariable(`谷歌搜索(VPN)\t::https://www.google.com/search?q=\n谷歌镜像1::https://shitu.paodekuaiweixinqun.com/webhp?safe=off&hl=zh-CN&q=\n谷歌镜像2::https://images.hk.53yu.com/search?safe=off&hl=zh-CN&q=`),[{\n\t\"name\":\"谷歌搜索(VPN)\",\n\t\"url\":\"https://www.google.com/search?q=\"\n},\n{\n\t\"name\":\"谷歌镜像1\",\n\t\"url\":\"https://shitu.paodekuaiweixinqun.com/webhp?safe=off&hl=zh-CN&q=\"\n},\n{\n\t\"name\":\"谷歌镜像2\",\n\t\"url\":\"https://images.hk.53yu.com/search?safe=off&hl=zh-CN&q=\"\n}]))",
+    "ruleContent": "",
+    "ruleDescription": "",
+    "ruleImage": "",
+    "ruleLink": "url",
+    "ruleNextPage": "",
+    "rulePubDate": "",
+    "ruleTitle": "name",
+    "singleUrl": false,
+    "sortUrl": "",
+    "sourceComment": "以如下格式设置源变量，可在列表后追加任意多个添加书签和搜索引擎\n\n夸克搜索::https://quark.sm.cn/s?q=小说排行",
+    "sourceGroup": "🔍搜索",
+    "sourceIcon": "https://5b0988e595225.cdn.sohucs.com/q_70,c_zoom,w_640/images/20180118/22271e695f5f48a89795e2b9858f5008.jpeg",
+    "sourceName": "聚合搜索",
+    "sourceUrl": "https://www.baidu.com",
+    "style": "",
+    "variableComment": ""
+  }
+]
