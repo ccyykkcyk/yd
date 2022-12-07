@@ -32,11 +32,11 @@
 
 ## 千仞云发布地址
 
-> 我不知道
+> 酷安：@千仞云
 
 ## 烏雲净化规则 发布地址
 
-> 酷安： @烏雲
+> 酷安: @烏雲
 >
 > 蓝奏 <https://www.lanzoux.com/b0bw8jwoh>
 
@@ -62,7 +62,7 @@
 >
 > 千仞云书源-其他 `https://gh.ccyykk.cf/https://github.com/ccyykkcyk/yd/raw/main/sy/qry-qt.json`
 >
-> 千仞云书源-女频 `https://gh.ccyykk.cf/https://github.com/ccyykkcyk/yd/raw/main/sy/qry-np.json`
+> 千仞云书源-网文 `https://gh.ccyykk.cf/https://github.com/ccyykkcyk/yd/raw/main/sy/qry-ww.json`
 >
 > 烏雲净化规则 `https://gh.ccyykk.cf/https://github.com/ccyykkcyk/yd/raw/main/jh/wy.json`
 
