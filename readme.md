@@ -2,9 +2,9 @@
 
 > gitlink: `https://www.gitlink.org.cn/yi-c/yd`
 >
-> 一程书源 `https://www.gitlink.org.cn/api/yi-c/yd/raw?filepath=sy.json`
+> 一程书源 `https://code.gitlink.org.cn/api/v1/repos/yi-c/yd/raw/sy.json`
 >
-> 一程订阅 `https://www.gitlink.org.cn/api/yi-c/yd/raw?filepath=dy.json`
+> 一程订阅 `https://code.gitlink.org.cn/api/v1/repos/yi-c/yd/raw/dy.json`
 
 ## 破冰发布地址
 
