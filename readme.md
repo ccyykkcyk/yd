@@ -2,15 +2,15 @@
 
 > gitlink: `https://www.gitlink.org.cn/yi-c/yd`
 >
-> 一程书源 `https://code.gitlink.org.cn/api/v1/repos/yi-c/yd/raw/sy.json`
+> 一程书源 `https://www.gitlink.org.cn/api/yi-c/yd/raw/sy.json?ref=master`
 >
-> 一程订阅 `https://code.gitlink.org.cn/api/v1/repos/yi-c/yd/raw/dy.json`
+> 一程订阅 `https://www.gitlink.org.cn/api/yi-c/yd/raw/dy.json?ref=master`
 
 ## 破冰发布地址
 
 > github: `https://github.com/PB-pobing/pobing`
 >
-> 破冰书源 `https://github.com/PB-pobing/pobing/raw/pb/50.json`
+> 破冰书源 `https://github.com/PB-pobing/pobing/raw/pb/sy.json`
 
 ## 风停在了窗边发布地址
 
@@ -21,6 +21,12 @@
 > 书源 `https://www.gitlink.org.cn/api/fcdlcb/ft-yd/raw?filepath=shareBookSource.json`
 >
 > 订阅 `https://www.gitlink.org.cn/api/fcdlcb/ft-yd/raw?filepath=shareRssSource.json`
+
+## XIU2发布地址
+
+> github: `https://github.com/XIU2/Yuedu`
+>
+> 书源 `https://bitbucket.org/xiu2/yuedu/raw/master/shuyuan`
 
 ## namofree发布地址
 
